@@ -1,0 +1,2 @@
+@Echo off
+start /b /wait "" "C:\Program Files\Wolfram Research\Wolfram Engine\13.1\wolframscript.exe" -file %1
