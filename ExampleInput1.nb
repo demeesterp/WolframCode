@@ -1,0 +1,392 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     14370,        384]
+NotebookOptionsPosition[     12425,        342]
+NotebookOutlinePosition[     12768,        357]
+CellTagsIndexPosition[     12725,        354]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"url", " ", "=", " ", 
+  "\"\<https://localhost:444/Api/molecule/name/water\>\""}]], "Input",
+ CellChangeTimes->{{3.9002345170986457`*^9, 3.9002345333653665`*^9}},
+ CellLabel->"In[11]:=",ExpressionUUID->"021ac6ce-f060-41e0-8048-a7cabf2f7f84"],
+
+Cell[BoxData["\<\"https://localhost:444/Api/molecule/name/water\"\>"], \
+"Output",
+ CellChangeTimes->{3.9002345348664007`*^9},
+ CellLabel->"Out[11]=",ExpressionUUID->"bc7301f7-6381-42f2-98d3-2c33afdbd8f1"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"data", " ", "=", " ", 
+  RowBox[{"Import", "[", "url", "]"}]}]], "Input",
+ CellChangeTimes->{{3.9002345530864353`*^9, 3.9002345658093348`*^9}, {
+   3.900234715646743*^9, 3.9002347517872095`*^9}, 3.9002348636542335`*^9},
+ CellLabel->"In[18]:=",ExpressionUUID->"f1396c3e-05e9-44e8-b173-a384203b121c"],
+
+Cell[BoxData["\<\"[{\\\"Id\\\":8,\\\"OrderName\\\":\\\"WaterParseTest\\\",\\\"\
+BasisSet\\\":\\\"STO-3G\\\",\\\"MoleculeName\\\":\\\"Water1\\\",\\\"Molecule\\\
+\":null},{\\\"Id\\\":7,\\\"OrderName\\\":\\\"WaterParseTest\\\",\\\"BasisSet\\\
+\":\\\"3-21G\\\",\\\"MoleculeName\\\":\\\"Water1\\\",\\\"Molecule\\\":null}]\"\
+\>"], "Output",
+ CellChangeTimes->{3.900234567595403*^9, 3.9002347538391685`*^9, 
+  3.9002348669660177`*^9},
+ CellLabel->"Out[18]=",ExpressionUUID->"7b00e2e4-ac81-4dbd-ae2b-ec50772da2db"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ImportString", "[", 
+  RowBox[{"data", ",", "\"\<JSON\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.9002347870533395`*^9, 3.900234787793333*^9}, {
+  3.9002348818331747`*^9, 3.900234899236512*^9}},
+ CellLabel->"In[19]:=",ExpressionUUID->"f58c9073-f1d9-4282-8dc4-9f8ffd23bb8a"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\<\"Id\"\>", "\[Rule]", "8"}], ",", 
+     RowBox[{"\<\"OrderName\"\>", "\[Rule]", "\<\"WaterParseTest\"\>"}], ",", 
+     RowBox[{"\<\"BasisSet\"\>", "\[Rule]", "\<\"STO-3G\"\>"}], ",", 
+     RowBox[{"\<\"MoleculeName\"\>", "\[Rule]", "\<\"Water1\"\>"}], ",", 
+     RowBox[{"\<\"Molecule\"\>", "\[Rule]", "Null"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\<\"Id\"\>", "\[Rule]", "7"}], ",", 
+     RowBox[{"\<\"OrderName\"\>", "\[Rule]", "\<\"WaterParseTest\"\>"}], ",", 
+     RowBox[{"\<\"BasisSet\"\>", "\[Rule]", "\<\"3-21G\"\>"}], ",", 
+     RowBox[{"\<\"MoleculeName\"\>", "\[Rule]", "\<\"Water1\"\>"}], ",", 
+     RowBox[{"\<\"Molecule\"\>", "\[Rule]", "Null"}]}], "}"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.9002349032018776`*^9},
+ CellLabel->"Out[19]=",ExpressionUUID->"a19950c7-377d-4454-bc7d-d9319fa84e87"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TableForm", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"\"\<Id\>\"", "\[Rule]", "8"}], ",", 
+        RowBox[{"\"\<OrderName\>\"", "\[Rule]", "\"\<WaterParseTest\>\""}], 
+        ",", 
+        RowBox[{"\"\<BasisSet\>\"", "\[Rule]", "\"\<STO-3G\>\""}], ",", 
+        RowBox[{"\"\<MoleculeName\>\"", "\[Rule]", "\"\<Water1\>\""}], ",", 
+        RowBox[{"\"\<Molecule\>\"", "\[Rule]", "Null"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"\"\<Id\>\"", "\[Rule]", "7"}], ",", 
+        RowBox[{"\"\<OrderName\>\"", "\[Rule]", "\"\<WaterParseTest\>\""}], 
+        ",", 
+        RowBox[{"\"\<BasisSet\>\"", "\[Rule]", "\"\<3-21G\>\""}], ",", 
+        RowBox[{"\"\<MoleculeName\>\"", "\[Rule]", "\"\<Water1\>\""}], ",", 
+        RowBox[{"\"\<Molecule\>\"", "\[Rule]", "Null"}]}], "}"}]}], "}"}], 
+    "\[LeftDoubleBracket]", 
+    RowBox[{"All", ",", "All", ",", "2"}], "\[RightDoubleBracket]"}], ",", 
+   RowBox[{"TableHeadings", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"None", ",", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"\"\<Id\>\"", "\[Rule]", "8"}], ",", 
+           RowBox[{"\"\<OrderName\>\"", "\[Rule]", "\"\<WaterParseTest\>\""}],
+            ",", 
+           RowBox[{"\"\<BasisSet\>\"", "\[Rule]", "\"\<STO-3G\>\""}], ",", 
+           RowBox[{"\"\<MoleculeName\>\"", "\[Rule]", "\"\<Water1\>\""}], ",", 
+           RowBox[{"\"\<Molecule\>\"", "\[Rule]", "Null"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"\"\<Id\>\"", "\[Rule]", "7"}], ",", 
+           RowBox[{"\"\<OrderName\>\"", "\[Rule]", "\"\<WaterParseTest\>\""}],
+            ",", 
+           RowBox[{"\"\<BasisSet\>\"", "\[Rule]", "\"\<3-21G\>\""}], ",", 
+           RowBox[{"\"\<MoleculeName\>\"", "\[Rule]", "\"\<Water1\>\""}], ",", 
+           RowBox[{"\"\<Molecule\>\"", "\[Rule]", "Null"}]}], "}"}]}], "}"}], 
+       "\[LeftDoubleBracket]", 
+       RowBox[{"1", ",", "All", ",", "1"}], "\[RightDoubleBracket]"}]}], 
+     "}"}]}]}], "]"}]], "Input",
+ NumberMarks->False,
+ CellLabel->"In[20]:=",ExpressionUUID->"da74200d-c755-4364-a9a2-8e4501311fbf"],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[GridBox[{
+     {
+      TagBox["\<\"Id\"\>",
+       HoldForm], 
+      TagBox["\<\"OrderName\"\>",
+       HoldForm], 
+      TagBox["\<\"BasisSet\"\>",
+       HoldForm], 
+      TagBox["\<\"MoleculeName\"\>",
+       HoldForm], 
+      TagBox["\<\"Molecule\"\>",
+       HoldForm]},
+     {"8", "\<\"WaterParseTest\"\>", "\<\"STO-3G\"\>", "\<\"Water1\"\>", 
+      "Null"},
+     {"7", "\<\"WaterParseTest\"\>", "\<\"3-21G\"\>", "\<\"Water1\"\>", "Null"}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxDividers->{
+     "Columns" -> {{False}}, "ColumnsIndexed" -> {}, 
+      "Rows" -> {False, True, {False}, False}, "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[2.0999999999999996`]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}],
+   {None, OutputFormsDump`HeadedColumns}],
+  Function[BoxForm`e$, 
+   TableForm[
+   BoxForm`e$, 
+    TableHeadings -> {
+     None, {"Id", "OrderName", "BasisSet", "MoleculeName", 
+       "Molecule"}}]]]], "Output",
+ CellChangeTimes->{3.900234945259617*^9},
+ CellLabel->
+  "Out[20]//TableForm=",ExpressionUUID->"7f7ebbed-e339-4421-be67-\
+2fcdbe9a5c55"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TableForm", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+     "8", ",", "\"\<WaterParseTest\>\"", ",", "\"\<STO-3G\>\"", ",", 
+      "\"\<Water1\>\"", ",", "Null"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+     "7", ",", "\"\<WaterParseTest\>\"", ",", "\"\<3-21G\>\"", ",", 
+      "\"\<Water1\>\"", ",", "Null"}], "}"}]}], "}"}], "]"}]], "Input",
+ NumberMarks->False,
+ CellLabel->"In[21]:=",ExpressionUUID->"4d803ef8-fe8f-4798-9a4f-3b34437b3a9a"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"8", "\<\"WaterParseTest\"\>", "\<\"STO-3G\"\>", "\<\"Water1\"\>", 
+     "Null"},
+    {"7", "\<\"WaterParseTest\"\>", "\<\"3-21G\"\>", "\<\"Water1\"\>", "Null"}
+   },
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[2.0999999999999996`]}, 
+       Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}, "RowsIndexed" -> {}}],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{3.9002350725644307`*^9},
+ CellLabel->
+  "Out[21]//TableForm=",ExpressionUUID->"399eae2f-2da1-4683-b921-\
+a3fa8aca6bdc"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"Grid", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+     "8", ",", "\"\<WaterParseTest\>\"", ",", "\"\<STO-3G\>\"", ",", 
+      "\"\<Water1\>\"", ",", "Null"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+     "7", ",", "\"\<WaterParseTest\>\"", ",", "\"\<3-21G\>\"", ",", 
+      "\"\<Water1\>\"", ",", "Null"}], "}"}]}], "}"}], "]"}]], "Input",
+ NumberMarks->False,
+ CellLabel->"In[22]:=",ExpressionUUID->"015d2106-5980-4aa7-a082-2c54648d1880"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"8", "\"\<WaterParseTest\>\"", "\"\<STO-3G\>\"", "\"\<Water1\>\"", ""},
+    {"7", "\"\<WaterParseTest\>\"", "\"\<3-21G\>\"", "\"\<Water1\>\"", ""}
+   },
+   AutoDelete->False,
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Grid"]], "Input",
+ CellChangeTimes->{{3.900235969316036*^9, 
+  3.9002359719135785`*^9}},ExpressionUUID->"089ab9c5-1cc3-4c74-9837-\
+d2f53b363c3a"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"data2", " ", "=", " ", 
+  RowBox[{"Import", "[", 
+   RowBox[{
+   "\"\<https://localhost:444/Api/molecule/name/water\>\"", ",", 
+    "\"\<JSON\>\""}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.9002359893183193`*^9, 3.900236035785858*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"7286be52-71c0-413d-86da-ba51122aebeb"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\<\"Id\"\>", "\[Rule]", "8"}], ",", 
+     RowBox[{"\<\"OrderName\"\>", "\[Rule]", "\<\"WaterParseTest\"\>"}], ",", 
+     RowBox[{"\<\"BasisSet\"\>", "\[Rule]", "\<\"STO-3G\"\>"}], ",", 
+     RowBox[{"\<\"MoleculeName\"\>", "\[Rule]", "\<\"Water1\"\>"}], ",", 
+     RowBox[{"\<\"Molecule\"\>", "\[Rule]", "Null"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\<\"Id\"\>", "\[Rule]", "7"}], ",", 
+     RowBox[{"\<\"OrderName\"\>", "\[Rule]", "\<\"WaterParseTest\"\>"}], ",", 
+     RowBox[{"\<\"BasisSet\"\>", "\[Rule]", "\<\"3-21G\"\>"}], ",", 
+     RowBox[{"\<\"MoleculeName\"\>", "\[Rule]", "\<\"Water1\"\>"}], ",", 
+     RowBox[{"\<\"Molecule\"\>", "\[Rule]", "Null"}]}], "}"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.9002360100565968`*^9, 3.9002360412232947`*^9},
+ CellLabel->"Out[2]=",ExpressionUUID->"ae1448a1-1d27-4dfe-b241-5e328d080fcf"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TableForm", "[", 
+  RowBox[{
+   RowBox[{"data2", "\[LeftDoubleBracket]", 
+    RowBox[{"All", ",", "All", ",", "2"}], "\[RightDoubleBracket]"}], ",", 
+   RowBox[{"TableHeadings", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"None", ",", 
+      RowBox[{"data2", "\[LeftDoubleBracket]", 
+       RowBox[{"1", ",", "All", ",", "1"}], "\[RightDoubleBracket]"}]}], 
+     "}"}]}]}], "]"}]], "Input",
+ NumberMarks->False,
+ CellLabel->"In[3]:=",ExpressionUUID->"64f3b84e-4565-4fd7-9935-b92e8c23a2a9"],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[GridBox[{
+     {
+      TagBox["\<\"Id\"\>",
+       HoldForm], 
+      TagBox["\<\"OrderName\"\>",
+       HoldForm], 
+      TagBox["\<\"BasisSet\"\>",
+       HoldForm], 
+      TagBox["\<\"MoleculeName\"\>",
+       HoldForm], 
+      TagBox["\<\"Molecule\"\>",
+       HoldForm]},
+     {"8", "\<\"WaterParseTest\"\>", "\<\"STO-3G\"\>", "\<\"Water1\"\>", 
+      "Null"},
+     {"7", "\<\"WaterParseTest\"\>", "\<\"3-21G\"\>", "\<\"Water1\"\>", "Null"}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxDividers->{
+     "Columns" -> {{False}}, "ColumnsIndexed" -> {}, 
+      "Rows" -> {False, True, {False}, False}, "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[2.0999999999999996`]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}],
+   {None, OutputFormsDump`HeadedColumns}],
+  Function[BoxForm`e$, 
+   TableForm[
+   BoxForm`e$, 
+    TableHeadings -> {
+     None, {"Id", "OrderName", "BasisSet", "MoleculeName", 
+       "Molecule"}}]]]], "Output",
+ CellChangeTimes->{3.900236062530048*^9},
+ CellLabel->
+  "Out[3]//TableForm=",ExpressionUUID->"af7a904d-d7a2-4c95-b095-6c4bc6091c4e"]
+}, Open  ]]
+},
+WindowSize->{1920, 989},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+FrontEndVersion->"11.3 for Microsoft Windows (64-bit) (March 6, 2018)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 265, 4, 28, "Input",ExpressionUUID->"021ac6ce-f060-41e0-8048-a7cabf2f7f84"],
+Cell[848, 28, 205, 3, 32, "Output",ExpressionUUID->"bc7301f7-6381-42f2-98d3-2c33afdbd8f1"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1090, 36, 322, 5, 28, "Input",ExpressionUUID->"f1396c3e-05e9-44e8-b173-a384203b121c"],
+Cell[1415, 43, 507, 7, 32, "Output",ExpressionUUID->"7b00e2e4-ac81-4dbd-ae2b-ec50772da2db"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1959, 55, 300, 5, 28, "Input",ExpressionUUID->"f58c9073-f1d9-4282-8dc4-9f8ffd23bb8a"],
+Cell[2262, 62, 924, 19, 32, "Output",ExpressionUUID->"a19950c7-377d-4454-bc7d-d9319fa84e87"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3223, 86, 2244, 50, 48, "Input",ExpressionUUID->"da74200d-c755-4364-a9a2-8e4501311fbf"],
+Cell[5470, 138, 1394, 41, 80, "Output",ExpressionUUID->"7f7ebbed-e339-4421-be67-2fcdbe9a5c55"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6901, 184, 496, 13, 28, "Input",ExpressionUUID->"4d803ef8-fe8f-4798-9a4f-3b34437b3a9a"],
+Cell[7400, 199, 808, 21, 62, "Output",ExpressionUUID->"399eae2f-2da1-4683-b921-a3fa8aca6bdc"]
+}, Open  ]],
+Cell[8223, 223, 491, 13, 28, "Input",ExpressionUUID->"015d2106-5980-4aa7-a082-2c54648d1880"],
+Cell[8717, 238, 436, 10, 44, InheritFromParent,ExpressionUUID->"089ab9c5-1cc3-4c74-9837-d2f53b363c3a"],
+Cell[CellGroupData[{
+Cell[9178, 252, 338, 7, 28, "Input",ExpressionUUID->"7286be52-71c0-413d-86da-ba51122aebeb"],
+Cell[9519, 261, 947, 19, 32, "Output",ExpressionUUID->"ae1448a1-1d27-4dfe-b241-5e328d080fcf"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10503, 285, 512, 12, 28, "Input",ExpressionUUID->"64f3b84e-4565-4fd7-9935-b92e8c23a2a9"],
+Cell[11018, 299, 1391, 40, 137, "Output",ExpressionUUID->"af7a904d-d7a2-4c95-b095-6c4bc6091c4e"]
+}, Open  ]]
+}
+]
+*)
+
